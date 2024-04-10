@@ -1,15 +1,9 @@
 def print_question(question, options):
-  """
-  Prints the question and options for the user to choose from.
-  """
   print(question)
   for idx, option in enumerate(options, start=1):
       print(f"{idx}. {option}")
 
 def get_user_answer():
-  """
-  Prompts the user for an answer and returns it after validating.
-  """
   while True:
       user_input = input("Enter your answer (1, 2, 3, or 4): ")
       if user_input.isdigit() and 1 <= int(user_input) <= 4:
@@ -18,9 +12,6 @@ def get_user_answer():
           print("Invalid input. Please enter a number between 1 and 4.")
 
 def evaluate_answer(user_answer, correct_answer, score):
-  """
-  Evaluates the user's answer and updates the score accordingly.
-  """
   if user_answer == correct_answer:
       print("Correct!")
       score += 1
